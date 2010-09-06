@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="HCAI_COM_IBM" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\HCAI_COM_IBM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="2; 1; 1;" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="C:\Program Files (x86)\GnuWin32\lib\libgsl.a" />
+					<Add library="C:\Program Files (x86)\GnuWin32\lib\libgsl.dll.a" />
+					<Add library="C:\Program Files (x86)\GnuWin32\lib\libgslcblas.a" />
+					<Add library="C:\Program Files (x86)\GnuWin32\lib\libgslcblas.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\HCAI_COM_IBM" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin\Debug" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="1; 10; 10;" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-pg" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-pg -lgmon" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="C:\Program Files (x86)\GnuWin32\include\gsl\gsl_randist.h" />
+		<Unit filename="C:\Program Files (x86)\GnuWin32\include\gsl\gsl_rng.h" />
+		<Unit filename="HCAI_COM_IBM.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="HCAI_Com_IBM.cpp" />
+		<Unit filename="mainHCAI_Com_IBM.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

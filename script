@@ -1,0 +1,52 @@
+
+
+allsim<-read.delim("results_timesteps.txt", header=TRUE)
+
+allsim<-read.delim("homeduration.txt", header=FALSE)
+plot(allsim$V2, plot="h")
+
+frequency(allsim$V2)
+
+header<-c("sim", "time", "S", "C", "I") 
+allsim<-read.csv("prevalence_over_time.txt", header=TRUE)
+
+
+
+allsim<-rbind( c("sim", "time", "S", "C", "I") , allsim)
+
+allsim<-as.data.frame(allsim)
+names(allsim)
+
+
+
+?as.data.frame
+
+
+Sim0<-subset(allsim, allsim$numsim==0, select=names(allsim)))
+Sim1<-subset(allsim, allsim$V1==1, select=names(allsim))
+Sim2<-subset(allsim, allsim$V1==2, select=names(allsim))
+Sim3<-subset(allsim, allsim$Sim==0, select=names(allsim))
+Sim4<-subset(allsim, allsim$Sim==2, select=names(allsim))
+Sim5<-subset(allsim, allsim$Sim==3, select=names(allsim))
+Sim6<-subset(allsim, allsim$Sim==2, select=names(allsim))
+Sim7<-subset(allsim, allsim$Sim==3, select=names(allsim))
+Sim8<-subset(allsim, allsim$Sim==2, select=names(allsim))
+Sim9<-subset(allsim, allsim$Sim==3, select=names(allsim))
+
+
+plot((Sim3$Day/365), ((Sim3$Cbd)/(Sim3$Cbd+Sim3$Ibd+Sim3$Sbd)),col="blue")
+
+points ((Sim3$Day/365), (Sim3$Ibd)/(Sim3$Cbd+Sim3$Ibd+Sim3$Sbd), col="green")
+points ((Sim3$Day/365), (Sim3$Iso)/(Sim3$Cbd+Sim3$Ibd+Sim3$Sbd), col="red")
+
+plot((Sim3$Day/365), ((Sim3$Iso)),col="blue")
+
+
+plot ((Sim3$Day/365), (Sim3$High.Risk))
+points ((Sim1$Day/365), (Sim1$High.Risk), col="red")
+points ((Sim3$Day/365), (Sim3$High.Risk), col="blue")
+
+plot ((Sim3$Day/365), (Sim3$Iso))
+points ((Sim1$Day/365), (Sim1$Ibd/365), col="red")
+points ((Sim6$Day/365), (Sim6$Ibd/365), col="blue")
+
