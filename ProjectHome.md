@@ -1,0 +1,1 @@
+Individual based model (IBM) of healthcare associated infection  (HCAI) transmission and control. This model was developed as part of the MOSAR project by the WP7 group based in the HPA, UK.
